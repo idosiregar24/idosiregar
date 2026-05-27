@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative rounded-[2rem] apple-glass overflow-hidden flex flex-col hover:bg-white/[0.05] transition-colors cursor-pointer"
+      className="w-[85vw] md:w-auto shrink-0 snap-center group relative rounded-[2rem] apple-glass overflow-hidden flex flex-col hover:bg-white/[0.05] transition-colors cursor-pointer"
       onClick={() => navigate(`/project/${project.id}`)}
       data-project-title={project.title}
       data-project-tech={project.tech}
@@ -172,7 +172,7 @@ const Portfolio = () => {
 
                 return (
                   <TabPanel key={cat} className="outline-none">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                       <AnimatePresence mode='popLayout'>
                         {currentProjects.map((project) => (
                           <ProjectCard key={project.id} project={project} />

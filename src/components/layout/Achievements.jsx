@@ -84,7 +84,7 @@ const Achievements = () => {
             <TabPanels>
               {categories.map((cat) => (
                 <TabPanel key={cat} className="outline-none">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     <AnimatePresence mode="popLayout">
                       {filterData(cat).map((item, idx) => (
                         <motion.div
@@ -94,7 +94,7 @@ const Achievements = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ duration: 0.4, delay: idx * 0.05, ease: "easeOut" }}
-                          className="apple-glass rounded-[2rem] p-6 hover:bg-white/[0.05] transition-colors border border-white/5 flex flex-col group"
+                          className="w-[85vw] md:w-auto shrink-0 snap-center apple-glass rounded-[2rem] p-6 hover:bg-white/[0.05] transition-colors border border-white/5 flex flex-col group"
                         >
                           {item.image_url && (
                             <div className="aspect-video w-full rounded-2xl overflow-hidden mb-6 bg-dark-950 border border-white/5">
@@ -118,7 +118,7 @@ const Achievements = () => {
                           <h3 className="text-xl font-bold text-white mb-3 tracking-tight">
                             {item.title}
                           </h3>
-                          <p className="text-sm text-white/50 leading-relaxed font-medium whitespace-pre-wrap">
+                          <p className="text-sm text-white/50 leading-relaxed font-medium line-clamp-3">
                             {item.description}
                           </p>
                         </motion.div>
