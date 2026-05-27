@@ -47,3 +47,28 @@ body {
 .perspective-2000 {
   perspective: 2000px;
 }
+
+ /* Google Translate overrides */
+body {
+  top: 0 !important;
+}
+.skiptranslate iframe,
+.goog-te-banner-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-smMxc-OEVmcd,
+#goog-gt-tt {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+.goog-tooltip {
+  display: none !important;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
