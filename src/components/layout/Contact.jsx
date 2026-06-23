@@ -22,17 +22,17 @@ const Contact = () => {
         if (data && data.value) {
           const vals = data.value;
           setContactLinks([
-            { icon: Mail, label: 'Email', value: vals.email || 'hello@example.com', link: vals.email ? `mailto:${vals.email}` : '#' },
-            { icon: Phone, label: 'Phone', value: vals.phone || '+62 812...', link: vals.phone ? `tel:${vals.phone.replace(/[^0-9+]/g, '')}` : '#' },
-            { icon: MapPin, label: 'Location', value: vals.location || 'Jakarta, Indonesia', link: '#' },
+            { icon: Mail, label: 'Email', value: vals.email || 'ido24si@mahasiswa.pcr.ac.id', link: vals.email ? `mailto:${vals.email}` : 'mailto:ido24si@mahasiswa.pcr.ac.id' },
+            { icon: Phone, label: 'Phone', value: vals.phone || '+62 813-6355-4262', link: vals.phone ? `tel:${vals.phone.replace(/[^0-9+]/g, '')}` : 'tel:+6281363554262' },
+            { icon: MapPin, label: 'Location', value: vals.location || 'Pekanbaru, Indonesia', link: '#' },
             { icon: Briefcase, label: 'LinkedIn', value: vals.linkedin ? 'linkedin.com/in/...' : 'Not provided', link: vals.linkedin || '#' },
             { icon: Code, label: 'GitHub', value: vals.github ? 'github.com/...' : 'Not provided', link: vals.github || '#' }
           ]);
         } else {
           setContactLinks([
-            { icon: Mail, label: 'Email', value: 'hello@example.com', link: '#' },
-            { icon: Phone, label: 'Phone', value: '+62...', link: '#' },
-            { icon: MapPin, label: 'Location', value: 'Jakarta, Indonesia', link: '#' }
+            { icon: Mail, label: 'Email', value: 'ido24si@mahasiswa.pcr.ac.id', link: 'mailto:ido24si@mahasiswa.pcr.ac.id' },
+            { icon: Phone, label: 'Phone', value: '+62 813-6355-4262', link: 'tel:+6281363554262' },
+            { icon: MapPin, label: 'Location', value: 'Pekanbaru, Indonesia', link: '#' }
           ]);
         }
       } catch (err) {

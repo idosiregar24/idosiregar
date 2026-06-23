@@ -12,7 +12,7 @@ const Navbar = () => {
   };
   const [lang, setLang] = useState(getInitialLang());
   const [settings, setSettings] = useState({
-    brand_logo_text: 'Ido Solutions',
+    brand_logo_text: 'Ido Refael Siregar',
     nav_items: [
       { label: 'Home', target: '#' },
       { label: 'Experience', target: '#features' },
@@ -96,7 +96,7 @@ const Navbar = () => {
              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <span className="text-sm font-bold tracking-tight text-white truncate min-w-0">
-            {settings.brand_logo_text || 'Ido Solutions'}
+            {settings.brand_logo_text || 'Ido Refael Siregar'}
           </span>
         </div>
 

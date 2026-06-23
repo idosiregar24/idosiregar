@@ -42,6 +42,22 @@ const Hero = () => {
     fetchSettings();
   }, []);
 
+  const handleScroll = (target) => {
+    if (!target) return;
+    if (target.startsWith('#')) {
+      if (target === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const element = document.querySelector(target);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      window.open(target, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col items-center justify-center bg-black bg-grid-pattern border-b border-white/[0.05] overflow-hidden">
       

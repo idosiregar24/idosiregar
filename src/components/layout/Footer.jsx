@@ -3,7 +3,7 @@ import { supabase } from '../../lib/supabase';
 
 const Footer = () => {
   const [settings, setSettings] = useState({
-    brand_text: 'Ido Solutions',
+    brand_text: 'Ido Refael Siregar',
     location: 'Jakarta, ID',
     social_links: [
       { label: 'GitHub', url: 'https://github.com' },
@@ -11,7 +11,7 @@ const Footer = () => {
       { label: 'X (Twitter)', url: 'https://x.com' },
       { label: 'Instagram', url: 'https://instagram.com' }
     ],
-    copyright: 'Designed with precision. © {year} Ido Solutions.'
+    copyright: 'Designed with precision. © {year} Ido Refael Siregar.'
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Footer = () => {
 
   const getFormattedCopyright = () => {
     const year = new Date().getFullYear();
-    const copyrightTemplate = settings.copyright || 'Designed with precision. © {year} Ido Solutions.';
+    const copyrightTemplate = settings.copyright || 'Designed with precision. © {year} Ido Refael Siregar.';
     return copyrightTemplate.replace('{year}', year);
   };
 

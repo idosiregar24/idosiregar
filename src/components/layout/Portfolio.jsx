@@ -35,11 +35,13 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="w-[85vw] md:w-auto shrink-0 snap-center group relative rounded-[2rem] apple-glass overflow-hidden flex flex-col hover:bg-white/[0.05] transition-colors cursor-pointer"
+      className="w-[85vw] md:w-auto shrink-0 snap-center group relative rounded-[2rem] apple-glass overflow-hidden flex flex-col hover:bg-white/[0.08] hover:border-white/20 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-300 cursor-pointer"
       onClick={() => navigate(`/project/${project.id}`)}
       data-project-title={project.title}
       data-project-tech={project.tech}
@@ -172,6 +174,14 @@ const Portfolio = () => {
 
                 return (
                   <TabPanel key={cat} className="outline-none">
+                    
+                    <div className="flex md:hidden items-center gap-2 text-white/40 text-[10px] mb-4 uppercase tracking-widest font-semibold ml-1">
+                      <motion.div animate={{ x: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                      </motion.div>
+                      <span>Swipe to explore</span>
+                    </div>
+
                     <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                       <AnimatePresence mode='popLayout'>
                         {currentProjects.map((project) => (

@@ -9,11 +9,11 @@ const CTASection = () => {
     description: "Have a project in mind or want to collaborate? I'm currently open to new opportunities and freelance work globally.",
     primary_button: {
       text: "Start a Conversation",
-      link: "mailto:hello@idosolutions.com"
+      link: "mailto:ido24si@mahasiswa.pcr.ac.id"
     },
     secondary_button: {
       text: "Copy Email Address",
-      email: "hello@idosolutions.com"
+      email: "ido24si@mahasiswa.pcr.ac.id"
     }
   });
 
