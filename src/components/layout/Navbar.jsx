@@ -92,9 +92,6 @@ const Navbar = () => {
           onClick={() => scrollToSection('#')}
           className="flex items-center gap-2 sm:gap-3 select-none cursor-pointer pr-2 sm:pr-4 min-w-0"
         >
-          <div className="w-6 h-6 shrink-0 bg-white rounded-full flex items-center justify-center">
-             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
           <span className="text-sm font-bold tracking-tight text-white truncate min-w-0">
             {settings.brand_logo_text || 'Ido Refael Siregar'}
           </span>
